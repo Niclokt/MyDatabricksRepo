@@ -35,7 +35,10 @@
 # COMMAND ----------
 
 # TODO
-events_df = FILL_IN
+events_df = spark.sql("""
+  SELECT * 
+  FROM events
+                      """)
 
 # COMMAND ----------
 
@@ -45,6 +48,7 @@ events_df = FILL_IN
 # COMMAND ----------
 
 # TODO
+events_df.printSchema()
 
 # COMMAND ----------
 
@@ -58,13 +62,16 @@ events_df = FILL_IN
 
 # TODO
 mac_df = (events_df
-          .FILL_IN
+          .select()
+          .where()
+          .orderby()
+          .show()
          )
 
 # COMMAND ----------
 
-# MAGIC %md ### 4. Count results and take first 5 rows
-# MAGIC - Use DataFrame actions to count and take rows
+.%md ### 4. Count results and take first 5 rows
+- Use DataFrame actions to count and take rows
 
 # COMMAND ----------
 
